@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E6813A52BA18DEB005AA699 /* deeplinksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6813A42BA18DEB005AA699 /* deeplinksApp.swift */; };
+		2E6813A72BA18DEB005AA699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6813A62BA18DEB005AA699 /* ContentView.swift */; };
+		2E6813A92BA18DEC005AA699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6813A82BA18DEC005AA699 /* Assets.xcassets */; };
+		2E6813AD2BA18DEC005AA699 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6813AC2BA18DEC005AA699 /* Preview Assets.xcassets */; };
+		2E6813B72BA1938E005AA699 /* CreateTransactionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6813B62BA1938E005AA699 /* CreateTransactionForm.swift */; };
+		2E74392E2BA2EB6D0059B525 /* CancelTransactionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E74392D2BA2EB6D0059B525 /* CancelTransactionForm.swift */; };
+		2E7439302BA2EE710059B525 /* TransactionDetailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E74392F2BA2EE710059B525 /* TransactionDetailForm.swift */; };
+		2E7439322BA82CE80059B525 /* CloseBatchForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7439312BA82CE80059B525 /* CloseBatchForm.swift */; };
+		2E86B6992BB563FF00CE10CC /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86B6982BB563FF00CE10CC /* LoginForm.swift */; };
+		2ECD79DC2CC64C30006D8B42 /* GPtomSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2ECD79DB2CC64C30006D8B42 /* GPtomSDK */; };
+		2EFA97BE2C591B360003E69A /* ResultForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFA97BD2C591B360003E69A /* ResultForm.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E6813A12BA18DEB005AA699 /* deeplinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deeplinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6813A42BA18DEB005AA699 /* deeplinksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deeplinksApp.swift; sourceTree = "<group>"; };
+		2E6813A62BA18DEB005AA699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2E6813A82BA18DEC005AA699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E6813AA2BA18DEC005AA699 /* deeplinks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = deeplinks.entitlements; sourceTree = "<group>"; };
+		2E6813AC2BA18DEC005AA699 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E6813B62BA1938E005AA699 /* CreateTransactionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionForm.swift; sourceTree = "<group>"; };
+		2E74392D2BA2EB6D0059B525 /* CancelTransactionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelTransactionForm.swift; sourceTree = "<group>"; };
+		2E74392F2BA2EE710059B525 /* TransactionDetailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailForm.swift; sourceTree = "<group>"; };
+		2E7439312BA82CE80059B525 /* CloseBatchForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseBatchForm.swift; sourceTree = "<group>"; };
+		2E7439332BA82FC80059B525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2E86B6982BB563FF00CE10CC /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		2EFA97BD2C591B360003E69A /* ResultForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultForm.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E68139E2BA18DEB005AA699 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ECD79DC2CC64C30006D8B42 /* GPtomSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E6813982BA18DEB005AA699 = {
+			isa = PBXGroup;
+			children = (
+				2E6813A32BA18DEB005AA699 /* deeplinks */,
+				2E6813A22BA18DEB005AA699 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E6813A22BA18DEB005AA699 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E6813A12BA18DEB005AA699 /* deeplinks.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E6813A32BA18DEB005AA699 /* deeplinks */ = {
+			isa = PBXGroup;
+			children = (
+				2E7439332BA82FC80059B525 /* Info.plist */,
+				2E6813B52BA19377005AA699 /* Forms */,
+				2E6813A42BA18DEB005AA699 /* deeplinksApp.swift */,
+				2E6813A62BA18DEB005AA699 /* ContentView.swift */,
+				2E6813A82BA18DEC005AA699 /* Assets.xcassets */,
+				2E6813AA2BA18DEC005AA699 /* deeplinks.entitlements */,
+				2E6813AB2BA18DEC005AA699 /* Preview Content */,
+			);
+			path = deeplinks;
+			sourceTree = "<group>";
+		};
+		2E6813AB2BA18DEC005AA699 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2E6813AC2BA18DEC005AA699 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2E6813B52BA19377005AA699 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				2E6813B62BA1938E005AA699 /* CreateTransactionForm.swift */,
+				2E74392D2BA2EB6D0059B525 /* CancelTransactionForm.swift */,
+				2E74392F2BA2EE710059B525 /* TransactionDetailForm.swift */,
+				2E7439312BA82CE80059B525 /* CloseBatchForm.swift */,
+				2E86B6982BB563FF00CE10CC /* LoginForm.swift */,
+				2EFA97BD2C591B360003E69A /* ResultForm.swift */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E6813A02BA18DEB005AA699 /* deeplinks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E6813B02BA18DEC005AA699 /* Build configuration list for PBXNativeTarget "deeplinks" */;
+			buildPhases = (
+				2E68139D2BA18DEB005AA699 /* Sources */,
+				2E68139E2BA18DEB005AA699 /* Frameworks */,
+				2E68139F2BA18DEB005AA699 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = deeplinks;
+			packageProductDependencies = (
+				2ECD79DB2CC64C30006D8B42 /* GPtomSDK */,
+			);
+			productName = deeplinks;
+			productReference = 2E6813A12BA18DEB005AA699 /* deeplinks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E6813992BA18DEB005AA699 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					2E6813A02BA18DEB005AA699 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 2E68139C2BA18DEB005AA699 /* Build configuration list for PBXProject "deeplinks" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E6813982BA18DEB005AA699;
+			packageReferences = (
+				2ECD79DA2CC64C30006D8B42 /* XCRemoteSwiftPackageReference "tom-ios-sdk" */,
+			);
+			productRefGroup = 2E6813A22BA18DEB005AA699 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E6813A02BA18DEB005AA699 /* deeplinks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E68139F2BA18DEB005AA699 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E6813AD2BA18DEC005AA699 /* Preview Assets.xcassets in Resources */,
+				2E6813A92BA18DEC005AA699 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E68139D2BA18DEB005AA699 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E6813B72BA1938E005AA699 /* CreateTransactionForm.swift in Sources */,
+				2E7439322BA82CE80059B525 /* CloseBatchForm.swift in Sources */,
+				2E7439302BA2EE710059B525 /* TransactionDetailForm.swift in Sources */,
+				2E6813A72BA18DEB005AA699 /* ContentView.swift in Sources */,
+				2E74392E2BA2EB6D0059B525 /* CancelTransactionForm.swift in Sources */,
+				2E6813A52BA18DEB005AA699 /* deeplinksApp.swift in Sources */,
+				2EFA97BE2C591B360003E69A /* ResultForm.swift in Sources */,
+				2E86B6992BB563FF00CE10CC /* LoginForm.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2E6813AE2BA18DEC005AA699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E6813AF2BA18DEC005AA699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2E6813B12BA18DEC005AA699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = deeplinks/deeplinks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"deeplinks/Preview Content\"";
+				DEVELOPMENT_TEAM = X3ZDWR29HS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = deeplinks/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tom deeplinks";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gptom.deeplinks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2E6813B22BA18DEC005AA699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = deeplinks/deeplinks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"deeplinks/Preview Content\"";
+				DEVELOPMENT_TEAM = X3ZDWR29HS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = deeplinks/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tom deeplinks";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gptom.deeplinks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E68139C2BA18DEB005AA699 /* Build configuration list for PBXProject "deeplinks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E6813AE2BA18DEC005AA699 /* Debug */,
+				2E6813AF2BA18DEC005AA699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E6813B02BA18DEC005AA699 /* Build configuration list for PBXNativeTarget "deeplinks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E6813B12BA18DEC005AA699 /* Debug */,
+				2E6813B22BA18DEC005AA699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ECD79DA2CC64C30006D8B42 /* XCRemoteSwiftPackageReference "tom-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:GP-tom/tom-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2ECD79DB2CC64C30006D8B42 /* GPtomSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ECD79DA2CC64C30006D8B42 /* XCRemoteSwiftPackageReference "tom-ios-sdk" */;
+			productName = GPtomSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2E6813992BA18DEB005AA699 /* Project object */;
+}
