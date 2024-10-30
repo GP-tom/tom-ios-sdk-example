@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:GP-tom/tom-ios-sdk.git",
       "state" : {
-        "revision" : "0d1496a29ac7c49b56124a788f7f55a57be9564b",
-        "version" : "1.0.3"
+        "revision" : "0646c54843ff77b40e20670efab52409a11bc256",
+        "version" : "1.0.4"
       }
     }
   ],
