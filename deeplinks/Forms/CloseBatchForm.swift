@@ -50,11 +50,11 @@ struct CloseBatchForm: View {
             }
 
             Section("client Phone") {
-                TextField("info@gptom.com", text: $clientPhone)
+                TextField("+420606505404", text: $clientPhone)
             }
 
             Section("client Email") {
-                TextField("+420606505404", text: $clientEmail)
+                TextField("info@gptom.com", text: $clientEmail)
             }
 
             Section("") {
