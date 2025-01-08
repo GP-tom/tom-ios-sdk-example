@@ -2,30 +2,12 @@
   "originHash" : "33f2d2ccb3d05424665a1fdd37eedbda4c123c701239527dd58a51b6700cd4e8",
   "pins" : [
     {
-      "identity" : "codablewrappers",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/GottaGetSwifty/CodableWrappers.git",
-      "state" : {
-        "revision" : "9e132f1dc4ba966acfdd6487c1815bd88809b5b4",
-        "version" : "3.0.1"
-      }
-    },
-    {
-      "identity" : "swift-syntax",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-syntax.git",
-      "state" : {
-        "revision" : "64889f0c732f210a935a0ad7cda38f77f876262d",
-        "version" : "509.1.1"
-      }
-    },
-    {
       "identity" : "tom-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:GP-tom/tom-ios-sdk.git",
       "state" : {
-        "revision" : "0646c54843ff77b40e20670efab52409a11bc256",
-        "version" : "1.0.4"
+        "revision" : "229c779f3b20a091efb3c1745ddc68197d1bd9ab",
+        "version" : "1.0.5"
       }
     }
   ],
