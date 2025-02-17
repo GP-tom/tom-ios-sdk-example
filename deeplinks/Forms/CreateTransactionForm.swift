@@ -17,6 +17,7 @@ struct CreateTransactionForm: View {
     @State var redirectUrl = ""
     @State var tipCollect = false
     @State var preferableReceiptType = ReceiptOption.qr
+    @State var transactionType = TransactionType.card
     @State var clientPhone = "+420606505404"
     @State var clientEmail = "info@gptom.com"
 
@@ -57,6 +58,15 @@ struct CreateTransactionForm: View {
                 Picker(selection: $tipCollect) {
                     Text("True").tag(true)
                     Text("False").tag(false)
+                } label: {
+                    Text("")
+                }
+            }
+
+            Section("Transaction Type") {
+                Picker(selection: $transactionType) {
+                    Text("Card").tag(TransactionType.card)
+                    Text("Account").tag(TransactionType.qr)
                 } label: {
                     Text("")
                 }
@@ -115,7 +125,8 @@ struct CreateTransactionForm: View {
                 "tipCollect": tipCollect.description,
                 "preferableReceiptType": preferableReceiptType.rawValue,
                 "clientPhone": clientPhone,
-                "clientEmail": clientEmail
+                "clientEmail": clientEmail,
+                "transactionType": transactionType.rawValue
             ])
 
         print(deeplink.absoluteString + "\n")
