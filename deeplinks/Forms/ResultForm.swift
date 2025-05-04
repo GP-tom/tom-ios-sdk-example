@@ -19,6 +19,8 @@ struct ResultForm: View {
                 jsonView(receipt: receipt, code: code, status: status)
             case .cancelTransaction(let receipt, let code, let status):
                 jsonView(receipt: receipt, code: code, status: status)
+            case .refundTransaction(let receipt, let code, let status):
+                jsonView(receipt: receipt, code: code, status: status)
             case .closeBatch(let batch, let status):
                 jsonView(batch: batch, status: status)
             case nil:

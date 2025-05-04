@@ -1,21 +1,19 @@
 //
-//  CreateTransactionForm.swift
+//  RefundForm.swift
 //  deeplinks
 //
-//  Created by Jan Švec on 13.03.2024.
+//  Created by Jan Švec on 02.05.2025.
 //
 
 import GPtomSDK
 import SwiftUI
 
-struct CreateTransactionForm: View {
+struct RefundForm: View {
     @State var amount = "2"
     @State var clientID = ""
     @State var referenceNumber = "12345"
     @State var printByPaymentApp = false
-    @State var tipAmount = "1"
     @State var redirectUrl = ""
-    @State var tipCollect = false
     @State var preferableReceiptType = ReceiptOption.qr
     @State var transactionType = TransactionType.card
     @State var clientPhone = "+420606505404"
@@ -46,27 +44,13 @@ struct CreateTransactionForm: View {
                 }
             }
 
-            Section("tip Amount") {
-                TextField("1000", text: $tipAmount)
-            }
-
             Section("redirect Url") {
                 TextField("tomdeeplink://...", text: $redirectUrl)
-            }
-
-            Section("tip Collect") {
-                Picker(selection: $tipCollect) {
-                    Text("True").tag(true)
-                    Text("False").tag(false)
-                } label: {
-                    Text("")
-                }
             }
 
             Section("Transaction Type") {
                 Picker(selection: $transactionType) {
                     Text("Card").tag(TransactionType.card)
-                    Text("Account").tag(TransactionType.qr)
                 } label: {
                     Text("")
                 }
@@ -122,11 +106,8 @@ struct CreateTransactionForm: View {
                 "originReferenceNum": referenceNumber
                     .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
                 "printByPaymentApp": printByPaymentApp.description,
-                "tipAmount": tipAmount
-                    .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
                 "redirectUrl": redirectUrl
                     .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-                "tipCollect": tipCollect.description,
                 "preferableReceiptType": preferableReceiptType.rawValue,
                 "clientPhone": clientPhone,
                 "clientEmail": clientEmail,
@@ -141,6 +122,6 @@ struct CreateTransactionForm: View {
 
 #Preview {
     NavigationStack {
-        CreateTransactionForm(path: "transaction/create")
+        CreateTransactionForm(path: "transaction/refund")
     }
 }

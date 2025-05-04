@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E64054C2DC5389D00598A72 /* RefundForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64054B2DC5387D00598A72 /* RefundForm.swift */; };
 		2E6813A52BA18DEB005AA699 /* deeplinksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6813A42BA18DEB005AA699 /* deeplinksApp.swift */; };
 		2E6813A72BA18DEB005AA699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6813A62BA18DEB005AA699 /* ContentView.swift */; };
 		2E6813A92BA18DEC005AA699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6813A82BA18DEC005AA699 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E64054B2DC5387D00598A72 /* RefundForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundForm.swift; sourceTree = "<group>"; };
 		2E6813A12BA18DEB005AA699 /* deeplinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deeplinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6813A42BA18DEB005AA699 /* deeplinksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deeplinksApp.swift; sourceTree = "<group>"; };
 		2E6813A62BA18DEB005AA699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				2E6813B62BA1938E005AA699 /* CreateTransactionForm.swift */,
+				2E64054B2DC5387D00598A72 /* RefundForm.swift */,
 				2E74392D2BA2EB6D0059B525 /* CancelTransactionForm.swift */,
 				2E74392F2BA2EE710059B525 /* TransactionDetailForm.swift */,
 				2E7439312BA82CE80059B525 /* CloseBatchForm.swift */,
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6813B72BA1938E005AA699 /* CreateTransactionForm.swift in Sources */,
+				2E64054C2DC5389D00598A72 /* RefundForm.swift in Sources */,
 				2E7439322BA82CE80059B525 /* CloseBatchForm.swift in Sources */,
 				2E7439302BA2EE710059B525 /* TransactionDetailForm.swift in Sources */,
 				2E6813A72BA18DEB005AA699 /* ContentView.swift in Sources */,
@@ -418,7 +422,7 @@
 			repositoryURL = "git@github.com:GP-tom/tom-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.7;
+				minimumVersion = 1.0.10;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

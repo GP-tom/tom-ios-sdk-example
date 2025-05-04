@@ -13,6 +13,7 @@ public enum Menu: CaseIterable, Identifiable {
 
     case createTransaction
     case cancelTransaction
+    case refundTransaction
     case transactionDetail
     case closeBatch
 //    case batchDetail
@@ -23,6 +24,7 @@ public enum Menu: CaseIterable, Identifiable {
         switch self {
         case .createTransaction: "transaction/create"
         case .cancelTransaction: "transaction/cancel"
+        case .refundTransaction: "transaction/refund"
         case .transactionDetail: "transaction/detail"
         case .closeBatch: "batch/close"
 //        case .batchDetail: "batch/detail"
@@ -53,6 +55,8 @@ struct ContentView: View {
                     CreateTransactionForm(path: item.path)
                 case .cancelTransaction:
                     CancelTransactionForm(path: item.path)
+                case .refundTransaction:
+                    RefundForm(path: item.path)
                 case .transactionDetail:
                     TransactionDetailForm(path: item.path)
                 case .closeBatch:
