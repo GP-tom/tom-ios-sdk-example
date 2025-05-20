@@ -23,6 +23,8 @@ struct ResultForm: View {
                 jsonView(receipt: receipt, code: code, status: status)
             case .closeBatch(let batch, let status):
                 jsonView(batch: batch, status: status)
+            case .status(let appStatus, let status):
+                jsonView(appStatus: appStatus, status: status)
             case nil:
                 Text("Failed to parse result")
             }
@@ -34,6 +36,7 @@ struct ResultForm: View {
     func jsonView(receipt: TransactionData? = nil,
                   batch: Batch? = nil,
                   code: RefusalCode? = nil,
+                  appStatus: AppStatus? = nil,
                   status: TaskStatus) -> some View
     {
         Section("Task status") {
@@ -55,6 +58,12 @@ struct ResultForm: View {
         if let batch {
             Section("Batch") {
                 Text(batch.toPrettyString())
+            }
+        }
+
+        if let appStatus {
+            Section("AppStatus") {
+                Text(appStatus.toPrettyString())
             }
         }
     }

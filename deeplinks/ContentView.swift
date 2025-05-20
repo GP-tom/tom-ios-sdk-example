@@ -42,6 +42,20 @@ struct ContentView: View {
     var body: some View {
         NavigationStack(path: $stack) {
             List {
+                Link("status",
+                     destination: buildDeeplink(
+                         path: "status",
+                         params: [
+                             "redirectUrl": deeplinks
+                                 .buildDeeplink(
+                                     scheme: "gp",
+                                     path: "status",
+                                     params: [:])
+                                 .absoluteString
+                                 .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                         ]))
+                         .buttonStyle(.plain)
+
                 ForEach(Menu.allCases) { item in
                     NavigationLink(value: item) {
                         Text(item.path)
