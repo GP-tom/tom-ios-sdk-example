@@ -9,11 +9,16 @@ import SwiftUI
 
 struct TransactionDetailForm: View {
     @State var amsID = ""
+    @State var requestId = "123"
 
     let path: String
 
     var body: some View {
         List {
+            Section("Request id") {
+                TextField("123", text: $requestId)
+            }
+
             Section("AMS ID") {
                 TextField("123", text: $amsID)
             }
@@ -34,6 +39,7 @@ struct TransactionDetailForm: View {
         let deeplink = deeplinks.buildDeeplink(
             path: path,
             params: [
+                "requestId": requestId,
                 "amsID": amsID
             ])
 

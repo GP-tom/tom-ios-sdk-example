@@ -9,6 +9,7 @@ import GPtomSDK
 import SwiftUI
 
 struct CancelTransactionForm: View {
+    @State var requestId = "123"
     @State var amsID = ""
     @State var clientID = ""
     @State var redirectUrl = ""
@@ -21,6 +22,10 @@ struct CancelTransactionForm: View {
 
     var body: some View {
         List {
+            Section("Request id") {
+                TextField("123", text: $requestId)
+            }
+
             Section("AMS ID") {
                 TextField("123", text: $amsID)
             }
@@ -85,6 +90,7 @@ struct CancelTransactionForm: View {
         let deeplink = deeplinks.buildDeeplink(
             path: path,
             params: [
+                "requestId": requestId,
                 "amsID": amsID,
                 "clientID": clientID,
                 "printByPaymentApp": printByPaymentApp.description,

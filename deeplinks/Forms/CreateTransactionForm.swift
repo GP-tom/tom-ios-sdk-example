@@ -9,6 +9,7 @@ import GPtomSDK
 import SwiftUI
 
 struct CreateTransactionForm: View {
+    @State var requestId = "123"
     @State var amount = "2"
     @State var clientID = ""
     @State var referenceNumber = "12345"
@@ -25,6 +26,10 @@ struct CreateTransactionForm: View {
 
     var body: some View {
         List {
+            Section("Request id") {
+                TextField("123", text: $requestId)
+            }
+
             Section("Amount") {
                 TextField("1000", text: $amount)
             }
@@ -67,6 +72,7 @@ struct CreateTransactionForm: View {
                 Picker(selection: $transactionType) {
                     Text("Card").tag(TransactionType.card)
                     Text("Account").tag(TransactionType.qr)
+                    Text("Blik").tag(TransactionType.blik)
                 } label: {
                     Text("")
                 }
@@ -115,6 +121,7 @@ struct CreateTransactionForm: View {
         let deeplink = deeplinks.buildDeeplink(
             path: path,
             params: [
+                "requestId": requestId,
                 "amount": amount
                     .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
 
