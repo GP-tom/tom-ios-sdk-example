@@ -73,6 +73,7 @@ struct CreateTransactionForm: View {
                     Text("Card").tag(TransactionType.card)
                     Text("Account").tag(TransactionType.qr)
                     Text("Blik").tag(TransactionType.blik)
+                    Text("WebPay").tag(TransactionType.gateway)
                 } label: {
                     Text("")
                 }
