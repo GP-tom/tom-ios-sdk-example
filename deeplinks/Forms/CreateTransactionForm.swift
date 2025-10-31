@@ -27,7 +27,7 @@ struct CreateTransactionForm: View {
     var body: some View {
         List {
             Section("Request id") {
-                TextField("123", text: $requestId)
+                TextField("", text: $requestId)
             }
 
             Section("Amount") {
@@ -35,7 +35,7 @@ struct CreateTransactionForm: View {
             }
 
             Section("Client ID") {
-                TextField("123", text: $clientID)
+                TextField("", text: $clientID)
             }
 
             Section("origin Reference Num") {

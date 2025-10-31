@@ -15,14 +15,14 @@ struct ResultForm: View {
     var body: some View {
         List {
             switch result {
-            case .createTransaction(let receipt, let code, let status):
-                jsonView(receipt: receipt, code: code, status: status)
-            case .cancelTransaction(let receipt, let code, let status):
-                jsonView(receipt: receipt, code: code, status: status)
-            case .refundTransaction(let receipt, let code, let status):
-                jsonView(receipt: receipt, code: code, status: status)
-            case .closeBatch(let batch, let status):
-                jsonView(batch: batch, status: status)
+            case .createTransaction(let receipt, let code, let status, let error):
+                jsonView(receipt: receipt, code: code, status: status, error: error)
+            case .cancelTransaction(let receipt, let code, let status, let error):
+                jsonView(receipt: receipt, code: code, status: status, error: error)
+            case .refundTransaction(let receipt, let code, let status, let error):
+                jsonView(receipt: receipt, code: code, status: status, error: error)
+            case .closeBatch(let batch, let status, let error):
+                jsonView(batch: batch, status: status, error: error)
             case .status(let appStatus, let status):
                 jsonView(appStatus: appStatus, status: status)
             case nil:
@@ -37,7 +37,8 @@ struct ResultForm: View {
                   batch: Batch? = nil,
                   code: RefusalCode? = nil,
                   appStatus: AppStatus? = nil,
-                  status: TaskStatus) -> some View
+                  status: TaskStatus,
+                  error: DeeplinkError? = nil) -> some View
     {
         Section("Task status") {
             Text(status.rawValue.lowercased())
@@ -52,6 +53,12 @@ struct ResultForm: View {
         if let code {
             Section("Code") {
                 Text(code.rawValue)
+            }
+        }
+
+        if let error {
+            Section("Error") {
+                Text(error.rawValue)
             }
         }
 
