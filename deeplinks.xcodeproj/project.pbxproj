@@ -422,7 +422,7 @@
 			repositoryURL = "git@github.com:GP-tom/tom-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.6.0;
+				minimumVersion = 1.7.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

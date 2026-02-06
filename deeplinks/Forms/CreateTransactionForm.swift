@@ -31,7 +31,7 @@ struct CreateTransactionForm: View {
             }
 
             Section("Amount") {
-                TextField("1000", text: $amount)
+                TextField("", text: $amount)
             }
 
             Section("Client ID") {
@@ -39,7 +39,7 @@ struct CreateTransactionForm: View {
             }
 
             Section("origin Reference Num") {
-                TextField("123", text: $referenceNumber)
+                TextField("", text: $referenceNumber)
             }
 
             Section("print By Payment App") {
@@ -52,7 +52,7 @@ struct CreateTransactionForm: View {
             }
 
             Section("tip Amount") {
-                TextField("1000", text: $tipAmount)
+                TextField("", text: $tipAmount)
             }
 
             Section("redirect Url") {
@@ -71,6 +71,7 @@ struct CreateTransactionForm: View {
             Section("Transaction Type") {
                 Picker(selection: $transactionType) {
                     Text("Card").tag(TransactionType.card)
+                    Text("Cash").tag(TransactionType.cash)
                     Text("Account").tag(TransactionType.qr)
                     Text("Blik").tag(TransactionType.blik)
                     Text("WebPay").tag(TransactionType.gateway)

@@ -51,6 +51,7 @@ struct RefundForm: View {
             Section("Transaction Type") {
                 Picker(selection: $transactionType) {
                     Text("Card").tag(TransactionType.card)
+                    Text("Cash").tag(TransactionType.cash)
                 } label: {
                     Text("")
                 }
