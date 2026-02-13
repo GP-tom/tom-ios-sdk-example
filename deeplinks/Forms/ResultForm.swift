@@ -1,10 +1,3 @@
-//
-//  ResultForm.swift
-//  deeplinks
-//
-//  Created by Jan Švec on 30.07.2024.
-//
-
 import Foundation
 import GPtomSDK
 import SwiftUI
@@ -15,16 +8,24 @@ struct ResultForm: View {
     var body: some View {
         List {
             switch result {
-            case .createTransaction(let receipt, let code, let status, let error):
+            case let .createTransaction(receipt, code, status, error):
                 jsonView(receipt: receipt, code: code, status: status, error: error)
-            case .cancelTransaction(let receipt, let code, let status, let error):
+
+            case let .cancelTransaction(receipt, code, status, error):
                 jsonView(receipt: receipt, code: code, status: status, error: error)
-            case .refundTransaction(let receipt, let code, let status, let error):
+
+            case let .refundTransaction(receipt, code, status, error):
                 jsonView(receipt: receipt, code: code, status: status, error: error)
-            case .closeBatch(let batch, let status, let error):
+
+            case let .closeBatch(batch, status, error):
                 jsonView(batch: batch, status: status, error: error)
-            case .status(let appStatus, let status):
+
+            case let .status(appStatus, status):
                 jsonView(appStatus: appStatus, status: status)
+
+            case let .login(status, error):
+                jsonView(status: status, error: error)
+
             case nil:
                 Text("Failed to parse result")
             }
@@ -33,13 +34,14 @@ struct ResultForm: View {
     }
 
     @ViewBuilder
-    func jsonView(receipt: TransactionData? = nil,
-                  batch: Batch? = nil,
-                  code: RefusalCode? = nil,
-                  appStatus: AppStatus? = nil,
-                  status: TaskStatus,
-                  error: DeeplinkError? = nil) -> some View
-    {
+    func jsonView(
+        receipt: TransactionData? = nil,
+        batch: Batch? = nil,
+        code: RefusalCode? = nil,
+        appStatus: AppStatus? = nil,
+        status: TaskStatus,
+        error: DeeplinkError? = nil
+    ) -> some View {
         Section("Task status") {
             Text(status.rawValue.lowercased())
         }

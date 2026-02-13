@@ -1,17 +1,11 @@
-//
-//  LoginForm.swift
-//  deeplinks
-//
-//  Created by Jan Švec on 28.03.2024.
-//
-
 import Foundation
 import SwiftUI
 
 struct LoginForm: View {
-    @State var username = ""
-    @State var password = ""
-    @State var tid = ""
+    @State private var username = ""
+    @State private var password = ""
+    @State private var tid = ""
+    @State private var redirectUrl = ""
 
     let path: String
 
@@ -29,6 +23,10 @@ struct LoginForm: View {
                 TextField("", text: $tid)
             }
 
+            Section("RedirectURL") {
+                TextField("", text: $redirectUrl)
+            }
+
             Section("") {
                 HStack {
                     Spacer()
@@ -36,6 +34,15 @@ struct LoginForm: View {
                     Spacer()
                 }
             }
+        }
+        .onAppear {
+            redirectUrl = deeplinks
+                .buildDeeplink(
+                    scheme: "gp",
+                    path: path,
+                    params: [:]
+                )
+                .absoluteString
         }
         .listSectionSpacing(0)
         .navigationTitle(path)
@@ -48,7 +55,9 @@ struct LoginForm: View {
                 "username": username,
                 "password": password,
                 "tid": tid,
-            ])
+                "redirectUrl": redirectUrl
+            ]
+        )
 
         print(deeplink.absoluteString + "\n")
 
