@@ -7,8 +7,11 @@
 
 import GPtomSDK
 import SwiftUI
+import UIKit
 
 struct RefundForm: View {
+    @Environment(\.openURL) private var openURL
+
     @State var amount = "2"
     @State var clientID = ""
     @State var referenceNumber = "12345"
@@ -79,7 +82,10 @@ struct RefundForm: View {
             Section("") {
                 HStack {
                     Spacer()
-                    Link("Test", destination: buildDeeplink())
+                    Button("Test") {
+                        dismissKeyboard()
+                        openURL(buildDeeplink())
+                    }
                     Spacer()
                 }
             }
@@ -118,6 +124,15 @@ struct RefundForm: View {
         print(deeplink.absoluteString + "\n")
 
         return deeplink
+    }
+
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
 

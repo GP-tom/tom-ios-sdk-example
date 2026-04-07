@@ -7,8 +7,11 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 
 struct LoginForm: View {
+    @Environment(\.openURL) private var openURL
+
     @State var username = ""
     @State var password = ""
     @State var tid = ""
@@ -32,7 +35,10 @@ struct LoginForm: View {
             Section("") {
                 HStack {
                     Spacer()
-                    Link("Test", destination: buildDeeplink())
+                    Button("Test") {
+                        dismissKeyboard()
+                        openURL(buildDeeplink())
+                    }
                     Spacer()
                 }
             }
@@ -53,6 +59,15 @@ struct LoginForm: View {
         print(deeplink.absoluteString + "\n")
 
         return deeplink
+    }
+
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
 
