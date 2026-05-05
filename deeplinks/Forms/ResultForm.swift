@@ -27,6 +27,12 @@ struct ResultForm: View {
                 jsonView(appStatus: appStatus, status: status)
             case nil:
                 Text("Failed to parse result")
+            case .some(.login(_, _)):
+                Text("Failed to parse result")
+            case .some(.logout(_)):
+                Text("Failed to parse result")
+            case .some(.changePassword(_, _)):
+                Text("Failed to parse result")
             }
         }
         .listSectionSpacing(0)
