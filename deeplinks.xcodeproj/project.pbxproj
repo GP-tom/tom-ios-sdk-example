@@ -38,7 +38,6 @@
 		2E7439332BA82FC80059B525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2E86B6982BB563FF00CE10CC /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		2EFA97BD2C591B360003E69A /* ResultForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultForm.swift; sourceTree = "<group>"; };
-		563DD0B92F3E485700D3576F /* tom-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tom-ios-sdk"; path = "../tom-ios-sdk"; sourceTree = SOURCE_ROOT; };
 		564E4D0B2F4636A900EAC26A /* LogoutForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutForm.swift; sourceTree = "<group>"; };
 		565225C62F4372C200516656 /* ChangePasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +73,6 @@
 		2E6813A32BA18DEB005AA699 /* deeplinks */ = {
 			isa = PBXGroup;
 			children = (
-				563DD0B92F3E485700D3576F /* tom-ios-sdk */,
 				2E7439332BA82FC80059B525 /* Info.plist */,
 				2E6813B52BA19377005AA699 /* Forms */,
 				2E6813A42BA18DEB005AA699 /* deeplinksApp.swift */,
