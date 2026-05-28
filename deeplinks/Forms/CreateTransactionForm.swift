@@ -7,8 +7,11 @@
 
 import GPtomSDK
 import SwiftUI
+import UIKit
 
 struct CreateTransactionForm: View {
+    @Environment(\.openURL) private var openURL
+
     @State var requestId = "123"
     @State var amount = "2"
     @State var clientID = ""
@@ -102,7 +105,10 @@ struct CreateTransactionForm: View {
             Section("") {
                 HStack {
                     Spacer()
-                    Link("Test", destination: buildDeeplink())
+                    Button("Test") {
+                        dismissKeyboard()
+                        openURL(buildDeeplink())
+                    }
                     Spacer()
                 }
             }
@@ -145,6 +151,15 @@ struct CreateTransactionForm: View {
         print(deeplink.absoluteString + "\n")
 
         return deeplink
+    }
+
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
 

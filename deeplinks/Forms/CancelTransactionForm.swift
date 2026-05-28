@@ -7,8 +7,11 @@
 
 import GPtomSDK
 import SwiftUI
+import UIKit
 
 struct CancelTransactionForm: View {
+    @Environment(\.openURL) private var openURL
+
     @State var requestId = "123"
     @State var amsID = ""
     @State var clientID = ""
@@ -69,7 +72,10 @@ struct CancelTransactionForm: View {
             Section("") {
                 HStack {
                     Spacer()
-                    Link("Test", destination: buildDeeplink())
+                    Button("Test") {
+                        dismissKeyboard()
+                        openURL(buildDeeplink())
+                    }
                     Spacer()
                 }
             }
@@ -104,6 +110,15 @@ struct CancelTransactionForm: View {
         print(deeplink.absoluteString + "\n")
 
         return deeplink
+    }
+
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
 

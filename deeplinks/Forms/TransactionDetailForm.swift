@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct TransactionDetailForm: View {
+    @Environment(\.openURL) private var openURL
+
     @State var amsID = ""
     @State var requestId = "123"
 
@@ -26,7 +29,10 @@ struct TransactionDetailForm: View {
             Section("") {
                 HStack {
                     Spacer()
-                    Link("Test", destination: buildDeeplink())
+                    Button("Test") {
+                        dismissKeyboard()
+                        openURL(buildDeeplink())
+                    }
                     Spacer()
                 }
             }
@@ -46,6 +52,15 @@ struct TransactionDetailForm: View {
         print(deeplink.absoluteString + "\n")
 
         return deeplink
+    }
+
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
 

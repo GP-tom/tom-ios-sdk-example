@@ -8,8 +8,11 @@
 import Foundation
 import GPtomSDK
 import SwiftUI
+import UIKit
 
 struct CloseBatchForm: View {
+    @Environment(\.openURL) private var openURL
+
     @State var clientID = ""
     @State var redirectUrl = ""
     @State var printByPaymentApp = false
@@ -60,7 +63,10 @@ struct CloseBatchForm: View {
             Section("") {
                 HStack {
                     Spacer()
-                    Link("Test", destination: buildDeeplink())
+                    Button("Test") {
+                        dismissKeyboard()
+                        openURL(buildDeeplink())
+                    }
                     Spacer()
                 }
             }
@@ -93,6 +99,15 @@ struct CloseBatchForm: View {
         print(deeplink.absoluteString + "\n")
 
         return deeplink
+    }
+
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
 
