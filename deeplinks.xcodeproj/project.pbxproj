@@ -19,6 +19,8 @@
 		2E86B6992BB563FF00CE10CC /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86B6982BB563FF00CE10CC /* LoginForm.swift */; };
 		2ECD79DC2CC64C30006D8B42 /* GPtomSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2ECD79DB2CC64C30006D8B42 /* GPtomSDK */; };
 		2EFA97BE2C591B360003E69A /* ResultForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFA97BD2C591B360003E69A /* ResultForm.swift */; };
+		564E4D0C2F4636AB00EAC26A /* LogoutForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E4D0B2F4636A900EAC26A /* LogoutForm.swift */; };
+		565225C72F4372CD00516656 /* ChangePasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565225C62F4372C200516656 /* ChangePasswordForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		2E86B6982BB563FF00CE10CC /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		2EFA97BD2C591B360003E69A /* ResultForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultForm.swift; sourceTree = "<group>"; };
 		563DD0B92F3E485700D3576F /* tom-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tom-ios-sdk"; path = "../tom-ios-sdk"; sourceTree = SOURCE_ROOT; };
+		564E4D0B2F4636A900EAC26A /* LogoutForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutForm.swift; sourceTree = "<group>"; };
+		565225C62F4372C200516656 /* ChangePasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		2E6813B52BA19377005AA699 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
+				564E4D0B2F4636A900EAC26A /* LogoutForm.swift */,
+				565225C62F4372C200516656 /* ChangePasswordForm.swift */,
 				2E6813B62BA1938E005AA699 /* CreateTransactionForm.swift */,
 				2E64054B2DC5387D00598A72 /* RefundForm.swift */,
 				2E74392D2BA2EB6D0059B525 /* CancelTransactionForm.swift */,
@@ -182,8 +188,10 @@
 			files = (
 				2E6813B72BA1938E005AA699 /* CreateTransactionForm.swift in Sources */,
 				2E64054C2DC5389D00598A72 /* RefundForm.swift in Sources */,
+				564E4D0C2F4636AB00EAC26A /* LogoutForm.swift in Sources */,
 				2E7439322BA82CE80059B525 /* CloseBatchForm.swift in Sources */,
 				2E7439302BA2EE710059B525 /* TransactionDetailForm.swift in Sources */,
+				565225C72F4372CD00516656 /* ChangePasswordForm.swift in Sources */,
 				2E6813A72BA18DEB005AA699 /* ContentView.swift in Sources */,
 				2E74392E2BA2EB6D0059B525 /* CancelTransactionForm.swift in Sources */,
 				2E6813A52BA18DEB005AA699 /* deeplinksApp.swift in Sources */,

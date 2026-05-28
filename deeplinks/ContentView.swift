@@ -1,16 +1,7 @@
-//
-//  ContentView.swift
-//  deeplinks
-//
-//  Created by Jan Švec on 13.03.2024.
-//
-
 import GPtomSDK
 import SwiftUI
 
 public enum Menu: CaseIterable, Identifiable {
-    public var id: Self { self }
-
     case createTransaction
     case cancelTransaction
     case refundTransaction
@@ -18,7 +9,13 @@ public enum Menu: CaseIterable, Identifiable {
     case closeBatch
 //    case batchDetail
     case login
+    case logout
+    case changePassword
     case result
+
+    public var id: Self {
+        self
+    }
 
     var path: String {
         switch self {
@@ -29,6 +26,8 @@ public enum Menu: CaseIterable, Identifiable {
         case .closeBatch: "batch/close"
 //        case .batchDetail: "batch/detail"
         case .login: "login"
+        case .logout: "logout"
+        case .changePassword: "change-password"
         case .result: "result"
         }
     }
@@ -37,24 +36,28 @@ public enum Menu: CaseIterable, Identifiable {
 var result: DeeplinkResult?
 
 struct ContentView: View {
-    @State var stack = [Menu]()
+    @State private var stack = [Menu]()
 
     var body: some View {
         NavigationStack(path: $stack) {
             List {
-                Link("status",
-                     destination: buildDeeplink(
-                         path: "status",
-                         params: [
-                             "redirectUrl": deeplinks
-                                 .buildDeeplink(
-                                     scheme: "gp",
-                                     path: "status",
-                                     params: [:])
-                                 .absoluteString
-                                 .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-                         ]))
-                         .buttonStyle(.plain)
+                Link(
+                    "status",
+                    destination: buildDeeplink(
+                        path: "status",
+                        params: [
+                            "redirectUrl": deeplinks
+                                .buildDeeplink(
+                                    scheme: "gp",
+                                    path: "status",
+                                    params: [:]
+                                )
+                                .absoluteString
+                                .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                        ]
+                    )
+                )
+                .buttonStyle(.plain)
 
                 ForEach(Menu.allCases) { item in
                     NavigationLink(value: item) {
@@ -79,6 +82,10 @@ struct ContentView: View {
 //                    CreateTransactionForm()
                 case .login:
                     LoginForm(path: item.path)
+                case .logout:
+                    LogoutForm(path: item.path)
+                case .changePassword:
+                    ChangePasswordForm(path: item.path)
                 case .result:
                     ResultForm(result: result)
                 }
@@ -91,10 +98,11 @@ struct ContentView: View {
     }
 }
 
-public func buildDeeplink(scheme: String = "gptom",
-                          path: String,
-                          params: [String: String?]) -> URL
-{
+public func buildDeeplink(
+    scheme: String = "gptom",
+    path: String,
+    params: [String: String?]
+) -> URL {
     var components = URLComponents(string: "\(scheme)://\(path)")!
 
     let params = params

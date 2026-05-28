@@ -23,8 +23,12 @@ struct ResultForm: View {
             case let .status(appStatus, status):
                 jsonView(appStatus: appStatus, status: status)
 
-            case let .login(status, error):
+            case let .changePassword(status, error),
+                 let .login(status, error):
                 jsonView(status: status, error: error)
+
+            case let .logout(status):
+                jsonView(status: status)
 
             case nil:
                 Text("Failed to parse result")
