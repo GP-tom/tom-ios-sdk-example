@@ -22,6 +22,7 @@ struct CreateTransactionForm: View {
     @State var tipCollect = false
     @State var preferableReceiptType = ReceiptOption.qr
     @State var transactionType = TransactionType.card
+    @State var fiscalize: Bool?
     @State var clientPhone = "+420606505404"
     @State var clientEmail = "info@gptom.com"
 
@@ -78,6 +79,16 @@ struct CreateTransactionForm: View {
                     Text("Account").tag(TransactionType.qr)
                     Text("Blik").tag(TransactionType.blik)
                     Text("WebPay").tag(TransactionType.gateway)
+                } label: {
+                    Text("")
+                }
+            }
+
+            Section("fiscalize") {
+                Picker(selection: $fiscalize) {
+                    Text("Not sent").tag(Bool?.none)
+                    Text("True").tag(Bool?.some(true))
+                    Text("False").tag(Bool?.some(false))
                 } label: {
                     Text("")
                 }
@@ -145,7 +156,8 @@ struct CreateTransactionForm: View {
                 "preferableReceiptType": preferableReceiptType.rawValue,
                 "clientPhone": clientPhone,
                 "clientEmail": clientEmail,
-                "transactionType": transactionType.rawValue
+                "transactionType": transactionType.rawValue,
+                "fiscalize": fiscalize?.description
             ])
 
         print(deeplink.absoluteString + "\n")

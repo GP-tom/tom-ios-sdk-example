@@ -13,6 +13,9 @@ struct TransactionDetailForm: View {
 
     @State var amsID = ""
     @State var requestId = "123"
+    @State var clientID = ""
+    /// Empty opens the detail in the payment app; otherwise the detail is returned here.
+    @State var redirectUrl = ""
 
     let path: String
 
@@ -24,6 +27,14 @@ struct TransactionDetailForm: View {
 
             Section("AMS ID") {
                 TextField("123", text: $amsID)
+            }
+
+            Section("Client ID") {
+                TextField("", text: $clientID)
+            }
+
+            Section("redirect Url (empty opens the detail)") {
+                TextField("tomdeeplink://...", text: $redirectUrl)
             }
 
             Section("") {
@@ -39,6 +50,14 @@ struct TransactionDetailForm: View {
         }
         .listSectionSpacing(0)
         .navigationTitle(path)
+        .onAppear {
+            redirectUrl = deeplinks
+                .buildDeeplink(
+                    scheme: "gp",
+                    path: path,
+                    params: [:])
+                .absoluteString
+        }
     }
 
     func buildDeeplink() -> URL {
@@ -46,7 +65,11 @@ struct TransactionDetailForm: View {
             path: path,
             params: [
                 "requestId": requestId,
-                "amsID": amsID
+                "amsID": amsID,
+                "clientID": clientID,
+                "redirectUrl": redirectUrl.isEmpty
+                    ? nil
+                    : redirectUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             ])
 
         print(deeplink.absoluteString + "\n")
