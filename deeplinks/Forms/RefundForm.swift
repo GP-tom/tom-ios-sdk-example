@@ -19,6 +19,7 @@ struct RefundForm: View {
     @State var redirectUrl = ""
     @State var preferableReceiptType = ReceiptOption.qr
     @State var transactionType = TransactionType.card
+    @State var fiscalize: Bool?
     @State var clientPhone = "+420606505404"
     @State var clientEmail = "info@gptom.com"
 
@@ -55,6 +56,16 @@ struct RefundForm: View {
                 Picker(selection: $transactionType) {
                     Text("Card").tag(TransactionType.card)
                     Text("Cash").tag(TransactionType.cash)
+                } label: {
+                    Text("")
+                }
+            }
+
+            Section("fiscalize") {
+                Picker(selection: $fiscalize) {
+                    Text("Not sent").tag(Bool?.none)
+                    Text("True").tag(Bool?.some(true))
+                    Text("False").tag(Bool?.some(false))
                 } label: {
                     Text("")
                 }
@@ -118,7 +129,8 @@ struct RefundForm: View {
                 "preferableReceiptType": preferableReceiptType.rawValue,
                 "clientPhone": clientPhone,
                 "clientEmail": clientEmail,
-                "transactionType": transactionType.rawValue
+                "transactionType": transactionType.rawValue,
+                "fiscalize": fiscalize?.description
             ])
 
         print(deeplink.absoluteString + "\n")
