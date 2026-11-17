@@ -18,6 +18,7 @@ struct CancelTransactionForm: View {
     @State var redirectUrl = ""
     @State var printByPaymentApp = false
     @State var preferableReceiptType = ReceiptOption.qr
+    @State var fiscalize: Bool?
     @State var clientPhone = "+420606505404"
     @State var clientEmail = "info@gptom.com"
 
@@ -48,6 +49,16 @@ struct CancelTransactionForm: View {
 
             Section("redirect Url") {
                 TextField("tomdeeplink://...", text: $redirectUrl)
+            }
+
+            Section("fiscalize") {
+                Picker(selection: $fiscalize) {
+                    Text("Not sent").tag(Bool?.none)
+                    Text("True").tag(Bool?.some(true))
+                    Text("False").tag(Bool?.some(false))
+                } label: {
+                    Text("")
+                }
             }
 
             Section("preferable Receipt Type") {
@@ -104,7 +115,8 @@ struct CancelTransactionForm: View {
                     .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
                 "preferableReceiptType": preferableReceiptType.rawValue,
                 "clientPhone": clientPhone,
-                "clientEmail": clientEmail
+                "clientEmail": clientEmail,
+                "fiscalize": fiscalize?.description
             ])
 
         print(deeplink.absoluteString + "\n")
